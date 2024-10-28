@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Oldenburg&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  /* background-color: #0077b1; */
+}
+
+:root {
+  --button-color: #0095f6;
+  --small-font: 0.87rem;
+  --small-grey: 0.75rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+.p_main {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 20px;
+}
+.p_16Bold {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Roboto";
+}
+.p_14Bold {
+  font-size: var(--small-font);
+  font-weight: 600;
+  line-height: 20px;
+}
+.p_14Bold_black {
+  font-size: var(--small-font);
+  font-weight: 600;
+  line-height: 20px;
+  color: #262626;
+  text-decoration: none;
+}
+.p_14Small {
+  font-size: var(--small-font);
+  font-weight: 400;
+  line-height: 18px;
+}
+.p_12SmallGrey {
+  font-size: var(--small-grey);
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  color: #737373;
+  text-decoration: none;
+}
+.sign_p {
+  text-align: center;
+}
+.p_14SmallGrey {
+  font-size: var(--small-font);
+  font-weight: 400;
+  line-height: 18px;
+  color: #737373;
+}
+.p_blue {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  color: #00376b;
+  text-decoration: none;
+}
+.p_14Blue {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  color: #0095f6;
+  text-decoration: none;
+}
+.p_blue:hover {
+  color: #005cb3;
+}
+.p_placehold {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 18.75px;
+  text-align: left;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+.notific {
+  box-shadow: 2px 2px 20px rgb(215, 215, 215);
+  max-width: 397px;
+  height: 100vh;
+  padding: 20px 24px;
+  border-right: 1px solid rgb(228, 228, 228);
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.notific_btn {
+  border-radius: 50%;
+  margin-right: 14px;
+  border: none;
+}
+.reset_center {
+  text-align: center;
+}
