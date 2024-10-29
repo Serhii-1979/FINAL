@@ -28,15 +28,15 @@ function Container() {
                 <img src={LogoName} alt="logo" />
             </div>
             <div className={styles.container_list}>
-                <ListItem icon={Home} textKey="home" />
-                <ListItem icon={Search} textKey="search" />
-                <ListItem icon={Explore} textKey="explore" />
-                <ListItem icon={Messanger} textKey="messages" />
-                <ListItem icon={Notification} textKey="notification" />
-                <ListItem icon={Create} textKey="create" />
+            <ListItem icon={Home} textKey="home" path="/home" />
+                <ListItem icon={Search} textKey="search" path="/search" />
+                <ListItem icon={Explore} textKey="explore" path="/explore" />
+                <ListItem icon={Messanger} textKey="messages" path="/messages" />
+                <ListItem icon={Notification} textKey="notification" path="/notifications" />
+                <ListItem icon={Create} textKey="create" path="/create" />
             </div>
             <div className={styles.container_profile}>
-                <ListItem icon={Profile} textKey="profile" />
+                <ListItem icon={Profile} textKey="profile" path="profile" />
             </div>
             <div className={styles.languageSwitcher}>
                 <button onClick={() => changeLanguage("en")}>EN</button>

@@ -1,36 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import FadeTransition from "../../components/FadeTransition";
 import ICH from "../../images/svg/ICH2.svg";
 import Button from "../../components/button/button";
 import styles from "./LogIn.module.css";
 
 function SignUp() {
   const { t } = useTranslation();
-  const [fadeIn, setFadeIn] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setFadeIn(true); // Устанавливаем fadeIn в true через 500мс
-    }, 500); 
-    return () => clearTimeout(timer); // Очищаем таймер при размонтировании
-  }, []);
-
-  // Состояния для значений полей
   const [email, setEmail] = useState("");
   const [fullName, setFullName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  // Состояния для ошибок
   const [errors, setErrors] = useState({
     email: "",
     fullName: "",
     username: "",
-    password: ""
+    password: "",
   });
 
-  // Функция для валидации полей
   const validateField = (name, value) => {
     switch (name) {
       case "email":
@@ -78,12 +68,12 @@ function SignUp() {
     }
     setErrors((prevErrors) => ({
       ...prevErrors,
-      [name]: validateField(name, value)
+      [name]: validateField(name, value),
     }));
   };
 
   return (
-    <div className={`${styles.LogIn_container} ${fadeIn ? styles['fade-in'] : ''}`}>
+    <FadeTransition>
       <div>
         <div className={styles.LogIn_cont}>
           <div>
@@ -102,10 +92,10 @@ function SignUp() {
                   value={email}
                   onChange={handleInputChange}
                   className={styles.LogIn_inp}
-                />             
+                />
               </div>
               {errors.email && (
-                  <p className={styles.errorText}>{errors.email}</p>
+                <p className={styles.errorText}>{errors.email}</p>
               )}
               <div className={styles.LogIn_cont_input}>
                 <input
@@ -115,10 +105,10 @@ function SignUp() {
                   value={fullName}
                   onChange={handleInputChange}
                   className={styles.LogIn_inp}
-                />             
+                />
               </div>
               {errors.fullName && (
-                  <p className={styles.errorText}>{errors.fullName}</p>
+                <p className={styles.errorText}>{errors.fullName}</p>
               )}
               <div className={styles.LogIn_cont_input}>
                 <input
@@ -128,10 +118,10 @@ function SignUp() {
                   value={username}
                   onChange={handleInputChange}
                   className={styles.LogIn_inp}
-                />            
+                />
               </div>
               {errors.username && (
-                  <p className={styles.errorText}>{errors.username}</p>
+                <p className={styles.errorText}>{errors.username}</p>
               )}
               <div className={styles.LogIn_cont_input}>
                 <input
@@ -141,15 +131,16 @@ function SignUp() {
                   value={password}
                   onChange={handleInputChange}
                   className={styles.LogIn_inp}
-                />               
+                />
               </div>
               {errors.password && (
-                  <p className={styles.errorText}>{errors.password}</p>
+                <p className={styles.errorText}>{errors.password}</p>
               )}
             </div>
             <div className={styles.sign_text}>
               <p className="p_12SmallGrey sign_p">
-                {t("terms_message")} <span className="p_blue">{t("learn_more")}</span>
+                {t("terms_message")}{" "}
+                <span className="p_blue">{t("learn_more")}</span>
               </p>
               <p className="p_12SmallGrey sign_p">{t("agree_terms")}</p>
             </div>
@@ -161,11 +152,13 @@ function SignUp() {
         <div className={styles.LogIn_cont}>
           <div className={styles.login_bottom}>
             <p className="p_14Small">{t("have_account")} </p>
-            <Link to="/login" className="p_14Blue">{t("login")}</Link>
+            <Link to="/login" className="p_14Blue">
+              {t("login")}
+            </Link>
           </div>
         </div>
       </div>
-    </div>
+    </FadeTransition>
   );
 }
 

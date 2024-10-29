@@ -1,0 +1,19 @@
+.container {
+   height: 100%; 
+   display: flex;
+   justify-content: center;
+   align-items: safe;
+   padding: 6% 7%;
+   opacity: 0;
+   transition: opacity 0.3s ease-in-out;
+}
+.fadeIn {
+    opacity: 1; 
+ }
+.cont_img {
+    width: 100%;
+}
+.cont_img img{
+margin: 0 2px;
+max-width: 190px;
+}
