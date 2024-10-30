@@ -15,10 +15,10 @@ function HomePage() {
   return (
       <div className={`${styles.homepage} ${isVisible ? styles.fadeIn : ''}`}>
         <div className={styles.homepage_up}>
-            <HomeFile />
-            <HomeFile />
-            <HomeFile />
-            <HomeFile />
+            <div><HomeFile /></div>
+            <div><HomeFile /></div>
+            <div><HomeFile /></div>
+            <div><HomeFile /></div>
         </div>
         <div className={styles.homepage_down}>
             <div className={styles.down_img}>

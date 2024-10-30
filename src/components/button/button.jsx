@@ -2,10 +2,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-
 import styles from "./button.module.css";
 
-function Button({ text, onClick, path }) {
+function Button({ text, onClick, path, type = "button" }) {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -14,14 +13,15 @@ function Button({ text, onClick, path }) {
       onClick(e);
     }
     if (path) {
+      e.preventDefault();
       navigate(path);
     }
   };
 
   return (
-    <div className={styles.button_1} onClick={handleClick}>
+    <button type={type} className={styles.button_1} onClick={handleClick}>
       {t(text)}
-    </div>
+    </button>
   );
 }
 

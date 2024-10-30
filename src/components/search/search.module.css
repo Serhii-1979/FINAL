@@ -28,12 +28,9 @@
   margin-right: 10px;
 }
 .search_list {
-    /* border: 1px solid silver; */
     width: 100%;
-    /* padding: 22px; */
 }
 .search_li {
-    /* border: 1px solid silver; */
     display: flex;
     align-items: center;
     padding: 6px 0;
